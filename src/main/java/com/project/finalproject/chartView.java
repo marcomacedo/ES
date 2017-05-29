@@ -25,7 +25,9 @@ public class chartView implements Serializable {
     private HashMap<Integer, Number> data;
     private finalBean bean;
     private int count;
-    private ChartSeries cs = new ChartSeries();;
+    private ChartSeries cs = new ChartSeries();
+
+    ;
 
     @PostConstruct
     public void init() {
@@ -43,7 +45,7 @@ public class chartView implements Serializable {
     public LineChartModel getLineModel2() {
         return SharedChart.getChart();
     }
-    
+
     private void createLineModels() {
 
         lineModel2 = initCategoryModel();
@@ -72,8 +74,8 @@ public class chartView implements Serializable {
 
         return model;
     }
-    
-    public void updateValues (int value) {
+
+    public void updateValues(int value) {
         LineChartModel model = new LineChartModel();
 
         cs.set(new SimpleDateFormat("HH.mm.ss").format(new Date()), value);
@@ -82,4 +84,11 @@ public class chartView implements Serializable {
         SharedChart.setChart(model);
     }
 
+    public String getCountH() {
+        return Integer.toString(Constants.getCountH());
+    }
+    
+    public String getCountL() {
+        return Integer.toString(Constants.getCountL());
+    }
 }

@@ -18,11 +18,13 @@ and open the template in the editor.
         <f:view>
             <p:chart type="line" model="#{chartView.lineModel2}" style="height:300px;"/>
             <h:form>
-            <br/><br/>
-            <h:outputText value="[ALARM COUNT] Heart Rate is greater than 150 : #{finalBean.count}"/>
-             <br/><br/>
-             <h:messages/>
-        </h:form>  
-            </f:view>
+                <br/><br/>
+                <h:outputText value="[ALARM COUNT] Heart Rate is greater than 150 : #{chartView.countH}"/>
+                <br/><br/>
+                <h:outputText value="[ALARM COUNT] Heart Rate is lower than 90 : #{chartView.countL}"/>
+                <br/><br/>
+                <h:messages/>
+            </h:form>  
+        </f:view>
     </h:body>
 </html>

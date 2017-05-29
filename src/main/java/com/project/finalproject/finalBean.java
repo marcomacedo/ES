@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
+import javax.faces.bean.ManagedBean;
 import org.primefaces.model.chart.Axis;
 import org.primefaces.model.chart.AxisType;
 import org.primefaces.model.chart.CategoryAxis;
@@ -25,8 +26,9 @@ import org.primefaces.model.chart.LineChartModel;
  *
  * @author brito
  */
-@Named(value = "finalBean")
-@ApplicationScoped
+//@Named(value = "finalBean")
+//@ApplicationScoped
+@ManagedBean
 public class finalBean {
 
     private final static String QUEUE_NAME = "hello";
@@ -36,7 +38,6 @@ public class finalBean {
     private Consumer consumer;
     private LineChartModel chart;
     private ChartSeries cs = new ChartSeries();
-    private int count = 0;
 
     /**
      * Creates a new instance of finalBean
@@ -70,24 +71,25 @@ public class finalBean {
 
     public void setValue(String v) {
         value = v;
-        if(Float.parseFloat(value)>150){
-            count++;
+        float temp = Float.parseFloat(value);
+        if (temp > 150) {
+            Constants.incrementAlarmHigh();
+        }
+
+        if (temp < 90 && temp != -1) {
+            Constants.incrementAlarmLow();
         }
     }
 
     public String getValue() {
         return value;
     }
-    
-    public String getCount(){
-        return Integer.toString(count);
-    }
 
     public void setCView(String value) {
         SharedChart.updateChart(Math.round(Float.parseFloat(value)));
     }
-    
-    public LineChartModel getCView(){
+
+    public LineChartModel getCView() {
         return SharedChart.getChart();
     }
 }
