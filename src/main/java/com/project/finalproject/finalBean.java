@@ -54,6 +54,9 @@ public class finalBean {
         initConsumer();
     }
 
+  
+    
+
     private void initConsumer() throws IOException {
         consumer = new DefaultConsumer(channel) {
             @Override
