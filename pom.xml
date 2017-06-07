@@ -29,9 +29,10 @@
         </dependency>
 	
 		<dependency>
-			<groupId>org.wildfly.plugins</groupId>
-			<artifactId>wildfly-maven-plugin</artifactId>
-			<version>1.0.2.Final</version>
+		  <groupId>org.wildfly.plugins</groupId>
+		  <artifactId>wildfly-maven-plugin</artifactId>
+		  <version>1.2.0.Alpha5</version>
+		  <type>maven-plugin</type>
 		</dependency>
 
         <dependency>
