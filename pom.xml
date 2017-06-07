@@ -180,8 +180,7 @@
 						<force>true</force>
 						<hostname>${hostname}</hostname>
 						<port>${port}</port>
-						<username>${username}</username>
-						<password>${password}</password>
+						
 						<filename>${filename}</filename>
 					  </configuration>
 			</plugin>
