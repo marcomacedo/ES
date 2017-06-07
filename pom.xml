@@ -171,8 +171,8 @@
 				   <configuration>
 					  <hostname>${hostname}</hostname>
 					  <port>43015</port>
-					  <username>administrator</username>
-					  <password>Password1!</password>
+					  <username>admin</username>
+					  <password>admin</password>
 				   </configuration>		
            </plugin>
 		  
