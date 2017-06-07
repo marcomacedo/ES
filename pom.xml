@@ -179,6 +179,8 @@
 						<force>true</force>
 						<hostname>${hostname}</hostname>
 						<port>${port}</port>
+						<username>admin</username>
+						<password>admin</password>
 						
 						<filename>${filename}</filename>
 					  </configuration>
