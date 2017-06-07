@@ -175,17 +175,7 @@
 					  <password>admin</password>
 				   </configuration>		
            </plugin>
-		   <plugin>
-				   <groupId>org.jboss.as.plugins</groupId>
-				   <artifactId>jboss-as-maven-plugin</artifactId>
-				   <version>7.5.Final</version>
-				   <configuration>
-					  <hostname>${hostname}</hostname>
-					  <port>43015</port>
-					  <username>admin</username>
-					  <password>admin</password>
-				</configuration>
-		  </plugin>
+		
 		  
         </plugins>
     </build>
