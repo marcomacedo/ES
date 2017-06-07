@@ -184,7 +184,7 @@
 						<filename>${filename}</filename>
 						 <domain>
 							<server-groups>
-								<server-group>deti-engsoft-01.ua.pt:43015</server-group>
+								<server-group>main-server-group</server-group>
 							</server-groups>
 						</domain>
 					  </configuration>
